@@ -25,6 +25,6 @@ router.get("/fetch", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.use("/.netlify/functions/api", router);
+app.use("/api", router);
 
 module.exports.handler = serverless(app);
