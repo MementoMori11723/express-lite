@@ -1,8 +1,10 @@
 const express = require("express");
 const serverless = require("serverless-http");
 const app = express();
-const { Insert, Select } = require("./database");
+const { Insert, Select, Create } = require("./database");
 const router = express.Router();
+
+Create();
 
 router.get("/", (req, res) => {
   res.send("<h1>Hi, Welcome to express-lite!</h1>");
