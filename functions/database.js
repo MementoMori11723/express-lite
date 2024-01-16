@@ -3,7 +3,7 @@ let query;
 
 // Connecting to database
 
-const db = new sql.Database("./base.db", sql.OPEN_READWRITE, (err) => {
+const db = new sql.Database("./functions/base.db", sql.OPEN_READWRITE, (err) => {
   if (err) return console.error(err.message);
 });
 
@@ -29,7 +29,7 @@ const Insert = (arr) => {
 
 // Showing data
 const Select = () =>
-  new Promise((resolve, reject) => {
+  new Promise(async (resolve, reject) => {
     const query = `select * from test`;
     const data = [];
     db.each(
