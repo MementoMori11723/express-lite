@@ -15,7 +15,7 @@ router.get("/:name/:number", (req, res) => {
   res.send(`<h1>${result}</h1>`);
 });
 
-router.get("/fetch", (req, res) => {
+router.get("/all", (req, res) => {
   Select()
     .then((data) => {
       console.log("here is your data : ");
